@@ -135,7 +135,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //   |----------+----------+----------+----------+----------+----------+--------------.        .--------------+----------+----------+----------+----------+----------+----------|
     /**/     KC_LCTL,      KC_Z,      KC_X,      KC_C,      KC_V,      KC_B,       KC_MUTE,         KC_MPLY,             KC_N,      KC_M,   KC_COMM,    KC_DOT,   KC_SLSH,    KC_ESC,
     //   `----------+----------+----------+----------+----------+----------/--------------/        \--------------\----------+----------+----------+----------+----------+----------|
-    /**/                            KC_DOT,   KC_LALT,   KC_LGUI, MO(_FKEY),       KC_SPC,           KC_ENT,        MO(_RISE),   KC_RALT,    KC_DOT,  KC_DOT
+    /**/                           KC_LCTL,   KC_LALT,   KC_LGUI, MO(_FKEY),       KC_SPC,           KC_ENT,        MO(_RISE),   KC_RALT,    KC_DOT,  KC_RCTL
     //                            \-----------------------------------------------------/            \-----------------------------------------------------/
     ),
 
@@ -145,11 +145,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //   |----------+----------+----------+----------+----------+----------|                                      |----------+----------+----------+----------+----------+----------|
     /**/      KC_F13,    KC_F14,    KC_F15,    KC_F16,    KC_F17,    KC_F18,                                           KC_F19,    KC_F20,    KC_F21,    KC_F22,    KC_F23,    KC_F24,
     //   |----------+----------+----------+----------+----------+----------|                                      |----------+----------+----------+----------+----------+----------|
-    /**/     KC_LSFT,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,                                          XXXXXXX,     KC_UP,   KC_PSCR,    KC_INS,   KC_HOME,   KC_PGUP,
+    /**/     KC_LSFT,   XXXXXXX,   XXXXXXX,   KC_BTN1,   KC_MS_U,   KC_BTN2,                                          XXXXXXX,     KC_UP,   KC_PSCR,    KC_INS,   KC_HOME,   KC_PGUP,
     //   |----------+----------+----------+----------+----------+----------+--------------.        .--------------+----------+----------+----------+----------+----------+----------|
-    /**/     KC_LCTL,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,       KC_MUTE,         XXXXXXX,          KC_LEFT,   KC_DOWN,  KC_RIGHT,    KC_DEL,    KC_END,   KC_PGDN,
+    /**/     KC_LCTL,   XXXXXXX,   XXXXXXX,   KC_MS_L,   KC_MS_D,   KC_MS_R,       KC_MUTE,         XXXXXXX,          KC_LEFT,   KC_DOWN,  KC_RIGHT,    KC_DEL,    KC_END,   KC_PGDN,
     //   `----------+----------+----------+----------+----------+----------/--------------/        \--------------\----------+----------+----------+----------+----------+----------|
-    /**/                           XXXXXXX,   KC_LALT,   KC_LGUI,   _______,       KC_SPC,           KC_ENT,         MO(_CONF),   KC_RALT,   XXXXXXX,  XXXXXXX
+    /**/                           KC_LCTL,   KC_LALT,   KC_LGUI,   _______,       KC_SPC,           KC_ENT,        MO(_CONF),   KC_RALT,   XXXXXXX, KC_RCTL
     //                            \-----------------------------------------------------/            \-----------------------------------------------------/
     ),
 
@@ -191,7 +191,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //   |----------+----------+----------+----------+----------+----------+--------------.        .--------------+----------+----------+----------+----------+----------+----------|
     /**/     KC_LCTL,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,       KC_MUTE,         XXXXXXX,          XXXXXXX,      KC_M,   XXXXXXX,   XXXXXXX,   XXXXXXX,    KC_ESC,
     //   `----------+----------+----------+----------+----------+----------/--------------/        \--------------\----------+----------+----------+----------+----------+----------|
-    /**/                           XXXXXXX,   XXXXXXX,   XXXXXXX,    KC_TAB,       KC_SPC,           KC_ENT,          XXXXXXX,   XXXXXXX,   XXXXXXX, DF(_BASE)
+    /**/                           XXXXXXX,   XXXXXXX,   XXXXXXX,    KC_TAB,       KC_SPC,           KC_ENT,          XXXXXXX,   XXXXXXX,   XXXXXXX,  XXXXXXX
     //                            \-----------------------------------------------------/            \-----------------------------------------------------/
     ),
 };
