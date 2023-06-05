@@ -19,7 +19,7 @@
 
 /// https://thomasbaart.nl/2018/12/01/reducing-firmware-size-in-qmk/
 
-#define MASTER_LEFT
+#define EE_HANDS
 
 #define CUSTOM_FONT
 
@@ -39,9 +39,11 @@
 
 /* ws2812 RGB LED */
 #define RGB_DI_PIN D3
+#define WS2812_DI_PIN RGB_DI_PIN
 
 #ifdef RGB_MATRIX_ENABLE
 #    define RGBLED_NUM 72
+#    define RGB_MATRIX_LED_COUNT RGBLED_NUM
 #    define DRIVER_LED_TOTAL RGBLED_NUM
 #    define RGB_MATRIX_SPLIT \
         { 36, 36 }
@@ -60,7 +62,7 @@
 
 /* Disable the animations you don't want/need.  You will need to disable a good number of these    *
  * because they take up a lot of space.  Disable until you can successfully compile your firmware. */
-#    define ENABLE_RGB_MATRIX_ALPHAS_MODS
+// #    define ENABLE_RGB_MATRIX_ALPHAS_MODS
 // #    define ENABLE_RGB_MATRIX_GRADIENT_UP_DOWN
 // #    define ENABLE_RGB_MATRIX_GRADIENT_LEFT_RIGHT
 // #    define ENABLE_RGB_MATRIX_BREATHING
@@ -99,7 +101,7 @@
 // #        define ENABLE_RGB_MATRIX_SOLID_REACTIVE
 // #        define ENABLE_RGB_MATRIX_SOLID_REACTIVE_WIDE
 // #        define ENABLE_RGB_MATRIX_SOLID_REACTIVE_MULTIWIDE
-#        define ENABLE_RGB_MATRIX_SOLID_REACTIVE_CROSS
+// #        define ENABLE_RGB_MATRIX_SOLID_REACTIVE_CROSS
 // #        define ENABLE_RGB_MATRIX_SOLID_REACTIVE_MULTICROSS
 // #        define ENABLE_RGB_MATRIX_SOLID_REACTIVE_NEXUS
 // #        define ENABLE_RGB_MATRIX_SOLID_REACTIVE_MULTINEXUS

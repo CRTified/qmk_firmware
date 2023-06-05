@@ -171,7 +171,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //   ,-----------------------------------------------------------------.                                      .-----------------------------------------------------------------,
     /**/     KC_LALT,      KC_1,      KC_2,      KC_3,      KC_4,      KC_5,                                             KC_6,      KC_7,      KC_8,      KC_9,      KC_0,    KC_GRV,
     //   |----------+----------+----------+----------+----------+----------|                                      |----------+----------+----------+----------+----------+----------|
-    /**/       RESET,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,                                          XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,
+    /**/     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,                                          XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,
     //   |----------+----------+----------+----------+----------+----------|                                      |----------+----------+----------+----------+----------+----------|
     /**/     RGB_TOG,   RGB_HUI,   RGB_SAI,   RGB_VAI,   RGB_SPI,   XXXXXXX,                                        DF(_TBOI),   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,
     //   |----------+----------+----------+----------+----------+----------+--------------.        .--------------+----------+----------+----------+----------+----------+----------|
@@ -279,22 +279,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 }
 
 #ifdef ENCODER_ENABLE
-
-bool encoder_update_user(uint8_t index, bool counterclock) {
-    if (index == 0) {
-        if (counterclock) {
-            tap_code(KC_VOLD);
-        } else {
-            tap_code(KC_VOLU);
-        }
-    } else if (index == 1) {
-        if (counterclock) {
-            tap_code(KC_VOLD);
-        } else {
-            tap_code(KC_VOLU);
-        }
-    }
-    return true;
-}
-
+#ifdef ENCODER_MAP_ENABLE
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
+  [_BASE] =   { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
+  [_RISE] = { ENCODER_CCW_CW(XXXXXXX, XXXXXXX), ENCODER_CCW_CW(XXXXXXX, XXXXXXX) },
+  [_FKEY] = { ENCODER_CCW_CW(XXXXXXX, XXXXXXX), ENCODER_CCW_CW(XXXXXXX, XXXXXXX) },
+  [_CONF] = { ENCODER_CCW_CW(XXXXXXX, XXXXXXX), ENCODER_CCW_CW(XXXXXXX, XXXXXXX) },
+  [_TBOI] = { ENCODER_CCW_CW(XXXXXXX, XXXXXXX), ENCODER_CCW_CW(XXXXXXX, XXXXXXX) },
+};
+#endif
 #endif
