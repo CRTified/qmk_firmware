@@ -26,6 +26,8 @@
 #define CUSTOM_LAYER_READ  // if you remove this it causes issues - needs better guarding
 
 
+#define DEBOUNCE 7
+
 #define TAPPING_FORCE_HOLD
 #ifdef TAPPING_TERM
 #    undef TAPPING_TERM
